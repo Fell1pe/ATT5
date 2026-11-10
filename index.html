@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form>
+        <h1>CADASTRO</h1>
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="campo">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+        </div>
+        <div class="campo">
+            <label for="data">Data de nascimento:</label>
+            <input type="date" id="data" name="data" required>
+        </div>
+        <div class="campo">
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
+                <option value="">Selecione seu curso</option>
+                <option value="ti">ADS</option>
+                <option value="direito">Direito</option>
+                <option value="administracao">Administração</option>
+                <option value="engenharia">Engenharia de Software</option>
+                <option value="engenharia">Biologia</option>
+                <option value="engenharia">Medicina</option>
+                <option value="engenharia">Biblioteconomia</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>Sexo:</label>
+            <div class="opcoes">
+                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="feminino"> Feminino</label>
+                <label><input type="radio" name="sexo" value="nao-dito"> Não declarar</label>
+                <label><input type="radio" name="sexo" value="outro"> Outro</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Interesses:</label>
+            <div class="opcoes">
+                <label><input type="checkbox" name="interesses" value="tecnologia"> Tecnologia</label>
+                <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+                <label><input type="checkbox" name="interesses" value="musica"> Música</label>
+                <label><input type="checkbox" name="interesses" value="jogos"> Jogos</label>
+                <label><input type="checkbox" name="interesses" value="leitura"> Leitura</label>
+                <label><input type="checkbox" name="interesses" value="instrumento"> Instrumento</label>
+                <label><input type="checkbox" name="interesses" value="games"> Games</label>
+            </div>
+        </div>
+        <div class="campo">
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Digite seus comentários..."></textarea>
+        </div>
+        <div class="campo">
+            <label for="foto">Upload de foto:</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+        </div>
+        <button type="submit">Enviar cadastro</button>
+    </form>
+      <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: poppins, sans-serif;
+            background-color: #20754a;
+        }
+        form {
+            background-color: rgb(18, 228, 165);
+            width: 100%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 4vh;
+            color: #0a321e;
+            font-weight: bold;
+        }
+        .campo {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-size: 2vh;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #0a4f34;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .opcoes label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+            margin-bottom: 8px;
+        }
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background-color: #004335;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #00ff6a;
+            color: #004335;
+            transform: scale(1.02);
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            form {
+                padding: 20px;
+                margin: 15px auto;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .opcoes label {
+                display: block;
+            }
+        }
+    </style>
+</body>
+</html>
